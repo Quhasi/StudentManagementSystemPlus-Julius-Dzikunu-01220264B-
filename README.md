@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Management System Plus
 
 Professional JavaFX desktop application for managing student records.
@@ -23,3 +24,7 @@ Professional JavaFX desktop application for managing student records.
 - **Service**: Business logic and validation
 - **Repository**: SQLite implementation via JDBC
 - **Util**: Logging, DB management, CSV helpers
+=======
+# StudentManagementSystemPlus-Julius-Dzikunu-01220264B-
+mid-sem
+>>>>>>> 3980c267f1ca49eb59775f29c2c4789449a3ef17
