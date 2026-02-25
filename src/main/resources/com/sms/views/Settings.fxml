@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sms.ui.SettingsController">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+    
+    <Label text="System Settings" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    
+    <VBox spacing="15" style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 10; -fx-max-width: 500;">
+        <Label text="General Configuration" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Default At-Risk GPA Threshold:" prefWidth="200"/>
+            <TextField fx:id="thresholdSettingField" text="2.0" prefWidth="80"/>
+        </HBox>
+        
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Database Path:" prefWidth="200"/>
+            <Label text="data/students.db" style="-fx-text-fill: #7f8c8d;"/>
+        </HBox>
+        
+        <Separator/>
+        
+        <Button text="Save Settings" onAction="#saveSettings" style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+    </VBox>
+</VBox>

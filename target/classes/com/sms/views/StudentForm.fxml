@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.sms.ui.StudentFormController" prefWidth="400">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Label text="Student Information" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="10" vgap="10">
+        <Label text="Student ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="idField" promptText="e.g. S1001" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Full Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="nameField" promptText="Enter full name" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Programme:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="programmeField" promptText="e.g. Computer Science" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        
+        <Label text="Level:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="levelCombo" prefWidth="150" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        
+        <Label text="GPA:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="gpaField" promptText="0.0 - 4.0" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        
+        <Label text="Email:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField" promptText="example@mail.com" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        
+        <Label text="Phone:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="phoneField" promptText="10-15 digits" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+        
+        <Label text="Status:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="statusCombo" prefWidth="150" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancel" onAction="#handleCancel"/>
+        <Button text="Save Student" onAction="#handleSave" style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

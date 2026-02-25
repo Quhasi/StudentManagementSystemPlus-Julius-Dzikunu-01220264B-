@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.sms.ui.MainController"
+            prefHeight="700.0" prefWidth="1000.0">
+    
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 20;">
+            <Label text="SMS PLUS" style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;"/>
+            <Separator/>
+            <Button text="Dashboard" onAction="#showDashboard" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Students" onAction="#showStudents" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Reports" onAction="#showReports" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Import/Export" onAction="#showImportExport" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+            <Button text="Settings" onAction="#showSettings" maxWidth="Infinity" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <StackPane fx:id="contentArea">
+            <!-- Content will be loaded here -->
+        </StackPane>
+    </center>
+
+</BorderPane>

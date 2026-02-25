@@ -1,0 +1,5 @@
+{
+  "name": "Student Management System Plus",
+  "description": "A professional JavaFX and SQLite desktop application for managing student records, generating reports, and handling CSV imports/exports.",
+  "requestFramePermissions": []
+}

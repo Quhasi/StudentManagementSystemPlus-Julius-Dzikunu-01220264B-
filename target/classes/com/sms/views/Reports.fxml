@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sms.ui.ReportsController">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+    
+    <Label text="Reports &amp; Analytics" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    
+    <TabPane VBox.vgrow="ALWAYS" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Top Performers">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Limit:"/>
+                    <Spinner fx:id="topLimitSpinner" prefWidth="80"/>
+                    <Button text="Generate" onAction="#generateTopPerformers"/>
+                    <Button text="Export CSV" onAction="#exportTopPerformers"/>
+                </HBox>
+                <TableView fx:id="topPerformersTable" VBox.vgrow="ALWAYS">
+                    <!-- Columns will be added in controller -->
+                </TableView>
+            </VBox>
+        </Tab>
+        <Tab text="At Risk Students">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="GPA Threshold:"/>
+                    <TextField fx:id="thresholdField" text="2.0" prefWidth="60"/>
+                    <Button text="Generate" onAction="#generateAtRisk"/>
+                    <Button text="Export CSV" onAction="#exportAtRisk"/>
+                </HBox>
+                <TableView fx:id="atRiskTable" VBox.vgrow="ALWAYS">
+                    <!-- Columns will be added in controller -->
+                </TableView>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sms.ui.DashboardController">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+    
+    <Label text="Dashboard Overview" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    
+    <GridPane hgap="20" vgap="20">
+        <VBox GridPane.columnIndex="0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <Label text="Total Students" style="-fx-text-fill: #7f8c8d;"/>
+            <Label fx:id="totalStudentsLabel" text="0" style="-fx-font-size: 32; -fx-font-weight: bold;"/>
+        </VBox>
+        
+        <VBox GridPane.columnIndex="1" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <Label text="Active Students" style="-fx-text-fill: #27ae60;"/>
+            <Label fx:id="activeStudentsLabel" text="0" style="-fx-font-size: 32; -fx-font-weight: bold;"/>
+        </VBox>
+
+        <VBox GridPane.columnIndex="2" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <Label text="Inactive Students" style="-fx-text-fill: #e67e22;"/>
+            <Label fx:id="inactiveStudentsLabel" text="0" style="-fx-font-size: 32; -fx-font-weight: bold;"/>
+        </VBox>
+
+        <VBox GridPane.columnIndex="3" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
+            <Label text="Average GPA" style="-fx-text-fill: #2980b9;"/>
+            <Label fx:id="averageGpaLabel" text="0.00" style="-fx-font-size: 32; -fx-font-weight: bold;"/>
+        </VBox>
+    </GridPane>
+</VBox>

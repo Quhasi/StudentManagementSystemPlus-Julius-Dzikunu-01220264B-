@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sms.ui.StudentController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="searchField" promptText="Search by ID or Name..." prefWidth="300"/>
+        <Button text="Search" onAction="#handleSearch"/>
+        <Button text="Refresh" onAction="#loadStudents"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button text="Add Student" onAction="#handleAdd" style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+        <Button text="Edit" onAction="#handleEdit" style="-fx-background-color: #2980b9; -fx-text-fill: white;"/>
+        <Button text="Delete" onAction="#handleDelete" style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+    </HBox>
+    
+    <TableView fx:id="studentTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idCol" text="Student ID" prefWidth="100"/>
+            <TableColumn fx:id="nameCol" text="Full Name" prefWidth="200"/>
+            <TableColumn fx:id="progCol" text="Programme" prefWidth="150"/>
+            <TableColumn fx:id="gpaCol" text="GPA" prefWidth="80"/>
+        </columns>
+    </TableView>
+</VBox>

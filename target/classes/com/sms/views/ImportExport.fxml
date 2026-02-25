@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.sms.ui.ImportExportController">
+    <padding><Insets top="30" right="30" bottom="30" left="30"/></padding>
+    
+    <Label text="Data Management" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="20">
+        <VBox spacing="10" prefWidth="400" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+            <Label text="Import Students from CSV" style="-fx-font-weight: bold;"/>
+            <Button text="Select CSV File" onAction="#handleImport" maxWidth="Infinity"/>
+            <Label fx:id="importStatusLabel" text="No file selected" style="-fx-text-fill: #7f8c8d;"/>
+            <TextArea fx:id="importLogArea" editable="false" prefHeight="200" promptText="Import logs will appear here..."/>
+        </VBox>
+        
+        <VBox spacing="10" prefWidth="400" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+            <Label text="Export Full Student List" style="-fx-font-weight: bold;"/>
+            <Button text="Export to CSV" onAction="#handleExport" maxWidth="Infinity" style="-fx-background-color: #2980b9; -fx-text-fill: white;"/>
+            <Label fx:id="exportStatusLabel" text="Data will be saved to 'data/students_export.csv'" style="-fx-text-fill: #7f8c8d;"/>
+        </VBox>
+    </HBox>
+</VBox>
